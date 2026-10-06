@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>भारत योजना AI | Government Schemes</title>
+
+<meta name="description"
+content="भारत की सरकारी योजनाओं की जानकारी हिंदी में प्राप्त करें। AI की मदद से पात्रता, लाभ, दस्तावेज और आवेदन प्रक्रिया जानें।">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#172033;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0b3d91,#1261c9);
+    color:white;
+    padding:16px 5%;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 4px 20px rgba(0,0,0,.12);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#ffd43b;
+}
+
+.nav-badge{
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);
+    padding:7px 12px;
+    border-radius:30px;
+    font-size:12px;
+}
+
+/* HERO */
+.hero{
+    max-width:1200px;
+    margin:35px auto 20px;
+    padding:55px 25px;
+    border-radius:28px;
+    background:
+        linear-gradient(135deg,rgba(11,61,145,.96),rgba(18,97,201,.91)),
+        radial-gradient(circle at top right,#ffd43b,transparent 30%);
+    color:white;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(11,61,145,.18);
+}
+
+.hero h1{
+    font-size:clamp(30px,6vw,54px);
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+    line-height:1.7;
+    opacity:.93;
+}
+
+.search-box{
+    max-width:760px;
+    margin:28px auto 0;
+    background:white;
+    padding:8px;
+    border-radius:16px;
+    display:flex;
+    gap:8px;
+}
+
+.search-box input{
+    flex:1;
+    border:0;
+    outline:none;
+    padding:14px;
+    font-size:16px;
+    color:#172033;
+}
+
+.search-box button{
+    border:0;
+    background:#ffb703;
+    color:#172033;
+    padding:0 20px;
+    border-radius:11px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:20px 0;
+}
+
+.stat{
+    background:white;
+    padding:22px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.stat strong{
+    display:block;
+    font-size:27px;
+    color:#0b3d91;
+}
+
+.stat span{
+    font-size:13px;
+    color:#657083;
+}
+
+/* CATEGORIES */
+.section-title{
+    margin:35px 0 15px;
+    font-size:25px;
+}
+
+.categories{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:8px;
+}
+
+.category{
+    white-space:nowrap;
+    border:1px solid #dce2ec;
+    background:white;
+    padding:11px 16px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.category:hover,
+.category.active{
+    background:#0b3d91;
+    color:white;
+}
+
+/* AI CARD */
+.ai-card{
+    margin-top:25px;
+    background:white;
+    border-radius:22px;
+    padding:25px;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.ai-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.ai-icon{
+    width:45px;
+    height:45px;
+    display:grid;
+    place-items:center;
+    border-radius:13px;
+    background:#e8f0ff;
+    font-size:23px;
+}
+
+textarea{
+    width:100%;
+    min-height:115px;
+    border:1px solid #dce2ec;
+    border-radius:14px;
+    padding:15px;
+    resize:vertical;
+    outline:none;
+    font-size:15px;
+}
+
+.ask-btn{
+    margin-top:12px;
+    background:#0b3d91;
+    color:white;
+    border:0;
+    padding:13px 22px;
+    border-radius:11px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:700;
+}
+
+.ask-btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+/* API */
+.api-box{
+    margin-top:18px;
+    background:#f7f9fc;
+    padding:15px;
+    border-radius:14px;
+    border:1px solid #e1e6ef;
+}
+
+.api-box label{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+.api-input{
+    width:100%;
+    border:1px solid #d7deea;
+    padding:12px;
+    border-radius:10px;
+    outline:none;
+}
+
+.api-note{
+    margin-top:7px;
+    font-size:12px;
+    color:#6b7280;
+}
+
+/* RESULT */
+.result{
+    margin-top:20px;
+    display:none;
+    background:#fbfcff;
+    border:1px solid #e1e7f0;
+    border-radius:16px;
+    padding:20px;
+    line-height:1.8;
+}
+
+.result h3{
+    color:#0b3d91;
+    margin-bottom:10px;
+}
+
+.result a{
+    color:#0759bd;
+    font-weight:700;
+}
+
+.loading{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.spinner{
+    width:20px;
+    height:20px;
+    border:3px solid #dce5f5;
+    border-top-color:#0b3d91;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg)}
+}
+
+/* SCHEMES */
+.schemes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.scheme{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    transition:.25s;
+}
+
+.scheme:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.scheme-icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.scheme h3{
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+.scheme p{
+    color:#687386;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.scheme button{
+    margin-top:15px;
+    border:0;
+    background:#edf3ff;
+    color:#0b3d91;
+    padding:9px 13px;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+/* FOOTER */
+footer{
+    margin-top:50px;
+    background:#101827;
+    color:#b9c2d0;
+    text-align:center;
+    padding:30px 20px;
+    line-height:1.8;
+}
+
+footer strong{
+    color:white;
+}
+
+@media(max-width:800px){
+    .stats,
+    .schemes{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        margin:15px;
+        padding:40px 18px;
+    }
+
+    .container{
+        padding:15px;
+    }
+}
+
+@media(max-width:500px){
+    .search-box{
+        flex-direction:column;
+        background:transparent;
+    }
+
+    .search-box input{
+        border-radius:11px;
+    }
+
+    .search-box button{
+        padding:13px;
+    }
+
+    .nav-badge{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">🇮🇳 भारत<span>योजना AI</span></div>
+        <div class="nav-badge">AI Powered • हिंदी</div>
+    </div>
+</header>
+
+<section class="hero">
+
+    <h1>भारत की सरकारी योजनाएँ</h1>
+
+    <p>
+        केंद्र और राज्य सरकार की योजनाओं के बारे में
+        पात्रता, लाभ, जरूरी दस्तावेज और आवेदन प्रक्रिया
+        हिंदी में जानें।
+    </p>
+
+    <div class="search-box">
+        <input id="quickSearch"
+               placeholder="जैसे: किसानों के लिए योजना, छात्रवृत्ति, आवास योजना...">
+
+        <button onclick="searchScheme()">
+            🔍 खोजें
+        </button>
+    </div>
+
+</section>
+
+<main class="container">
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong>5000+</strong>
+            <span>विभिन्न सरकारी योजनाएँ</span>
+        </div>
+
+        <div class="stat">
+            <strong>भारत</strong>
+            <span>केंद्र + राज्य/UT योजनाएँ</span>
+        </div>
+
+        <div class="stat">
+            <strong>AI</strong>
+            <span>हिंदी में योजना जानकारी</span>
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title">📂 योजना की श्रेणी</h2>
+
+    <div class="categories">
+
+        <div class="category active" onclick="categorySearch('सभी')">
+            सभी
+        </div>
+
+        <div class="category" onclick="categorySearch('कृषि और किसान')">
+            🌾 कृषि
+        </div>
+
+        <div class="category" onclick="categorySearch('शिक्षा और छात्रवृत्ति')">
+            🎓 शिक्षा
+        </div>
+
+        <div class="category" onclick="categorySearch('स्वास्थ्य')">
+            🏥 स्वास्थ्य
+        </div>
+
+        <div class="category" onclick="categorySearch('महिला और बाल विकास')">
+            👩 महिला एवं बाल
+        </div>
+
+        <div class="category" onclick="categorySearch('रोजगार और कौशल')">
+            💼 रोजगार
+        </div>
+
+        <div class="category" onclick="categorySearch('आवास')">
+            🏠 आवास
+        </div>
+
+        <div class="category" onclick="categorySearch('व्यवसाय और MSME')">
+            🏢 व्यवसाय
+        </div>
+
+    </div>
+
+
+    <!-- AI SECTION -->
+
+    <section class="ai-card">
+
+        <div class="ai-header">
+
+            <div class="ai-icon">🤖</div>
+
+            <div>
+                <h2>AI योजना सहायक</h2>
+                <p style="color:#687386;font-size:13px;">
+                    अपनी जरूरत बताइए, AI संबंधित सरकारी योजनाएँ खोजेगा।
+                </p>
+            </div>
+
+        </div>
+
+
+        <textarea id="question"
+        placeholder="उदाहरण: मैं मध्य प्रदेश का छात्र हूँ और मुझे पढ़ाई के लिए सरकारी छात्रवृत्ति चाहिए। मेरे लिए कौन-कौन सी योजनाएँ हैं?"></textarea>
+
+
+        <div class="api-box">
+
+            <label>🔐 Groq API Key</label>
+
+            <input
+                id="apiKey"
+                class="api-input"
+                type="password"
+                placeholder="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">
+
+            <div class="api-note">
+                ⚠️ Testing के लिए key यहाँ डालें। Public GitHub website में
+                API key को HTML में permanently save न करें।
+            </div>
+
+        </div>
+
+
+        <button class="ask-btn" id="askBtn" onclick="askAI()">
+            ✨ योजना खोजें
+        </button>
+
+
+        <div class="result" id="result"></div>
+
+    </section>
+
+
+    <!-- POPULAR SCHEMES -->
+
+    <h2 class="section-title">⭐ लोकप्रिय योजनाएँ</h2>
+
+    <div class="schemes">
+
+        <div class="scheme">
+
+            <div class="scheme-icon">🌾</div>
+
+            <h3>प्रधानमंत्री किसान सम्मान निधि</h3>
+
+            <p>
+                किसानों से संबंधित योजना की पात्रता,
+                लाभ और आवेदन प्रक्रिया AI से जानें।
+            </p>
+
+            <button onclick="askPreset('प्रधानमंत्री किसान सम्मान निधि योजना की वर्तमान पात्रता, लाभ, आवश्यक दस्तावेज और आवेदन प्रक्रिया हिंदी में बताओ।')">
+                जानकारी देखें
+            </button>
+
+        </div>
+
+
+        <div class="scheme">
+
+            <div class="scheme-icon">🏠</div>
+
+            <h3>प्रधानमंत्री आवास योजना</h3>
+
+            <p>
+                आवास से संबंधित सरकारी सहायता और
+                पात्रता की जानकारी प्राप्त करें।
+            </p>
+
+            <button onclick="askPreset('प्रधानमंत्री आवास योजना की वर्तमान पात्रता, लाभ, दस्तावेज और आवेदन प्रक्रिया हिंदी में बताओ।')">
+                जानकारी देखें
+            </button>
+
+        </div>
+
+
+        <div class="scheme">
+
+            <div class="scheme-icon">🎓</div>
+
+            <h3>छात्रवृत्ति योजनाएँ</h3>
+
+            <p>
+                विद्यार्थियों के लिए उपलब्ध सरकारी
+                scholarship योजनाएँ खोजें।
+            </p>
+
+            <button onclick="askPreset('भारत में विद्यार्थियों के लिए वर्तमान सरकारी छात्रवृत्ति योजनाएँ बताओ और पात्रता समझाओ।')">
+                योजनाएँ देखें
+            </button>
+
+        </div>
+
+
+        <div class="scheme">
+
+            <div class="scheme-icon">🏥</div>
+
+            <h3>स्वास्थ्य योजनाएँ</h3>
+
+            <p>
+                स्वास्थ्य और चिकित्सा सहायता से जुड़ी
+                सरकारी योजनाओं की जानकारी।
+            </p>
+
+            <button onclick="askPreset('भारत की प्रमुख वर्तमान सरकारी स्वास्थ्य योजनाएँ और उनकी पात्रता हिंदी में बताओ।')">
+                जानकारी देखें
+            </button>
+
+        </div>
+
+
+        <div class="scheme">
+
+            <div class="scheme-icon">👩</div>
+
+            <h3>महिला एवं बाल योजनाएँ</h3>
+
+            <p>
+                महिलाओं और बच्चों के लिए उपलब्ध
+                सरकारी योजनाओं को खोजें।
+            </p>
+
+            <button onclick="askPreset('महिलाओं और बच्चों के लिए वर्तमान भारत सरकार की प्रमुख योजनाएँ बताओ।')">
+                योजनाएँ देखें
+            </button>
+
+        </div>
+
+
+        <div class="scheme">
+
+            <div class="scheme-icon">💼</div>
+
+            <h3>रोजगार एवं कौशल</h3>
+
+            <p>
+                रोजगार, training और skill development
+                से जुड़ी योजनाएँ खोजें।
+            </p>
+
+            <button onclick="askPreset('युवाओं के लिए वर्तमान सरकारी रोजगार और skill development योजनाएँ बताओ।')">
+                योजनाएँ देखें
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <strong>🇮🇳 भारतयोजना AI</strong>
+
+    <br>
+
+    यह वेबसाइट सरकारी योजनाओं की जानकारी खोजने में सहायता करती है।
+
+    <br>
+
+    आधिकारिक आवेदन या अंतिम पात्रता के लिए संबंधित सरकारी
+    वेबसाइट अवश्य जाँचें।
+
+    <br><br>
+
+    <small>
+        Data source reference:
+        India.gov.in / myScheme.gov.in
+    </small>
+
+</footer>
+
+
+<script>
+
+const MODEL = "openai/gpt-oss-120b";
+
+const API_URL =
+"https://api.groq.com/openai/v1/responses";
+
+
+function getKey(){
+
+    return document.getElementById("apiKey").value.trim();
+
+}
+
+
+function showLoading(){
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML = `
+        <div class="loading">
+            <div class="spinner"></div>
+            <span>सरकारी योजनाओं की जानकारी खोजी जा रही है...</span>
+        </div>
+    `;
+}
+
+
+function cleanText(text){
+
+    if(!text) return "";
+
+    return text
+        .replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>")
+        .replace(/\n\n/g,"<br><br>")
+        .replace(/\n/g,"<br>");
+
+}
+
+
+async function askAI(customQuestion = null){
+
+    const apiKey = getKey();
+
+    if(!apiKey){
+
+        alert("पहले अपनी Groq API Key डालें।");
+        document.getElementById("apiKey").focus();
+        return;
+
+    }
+
+
+    const question =
+        customQuestion ||
+        document.getElementById("question").value.trim();
+
+
+    if(!question){
+
+        alert("कृपया अपनी जरूरत या योजना का नाम लिखें।");
+        return;
+
+    }
+
+
+    const btn = document.getElementById("askBtn");
+
+    btn.disabled = true;
+
+    showLoading();
+
+
+    const systemPrompt = `
+
+तुम भारत सरकार की योजनाओं के लिए हिंदी AI सहायक हो।
+
+यूजर को भारत की वर्तमान सरकारी योजनाओं के बारे में
+सटीक और आसान हिंदी में जानकारी दो।
+
+जहाँ संभव हो web search का उपयोग करके नवीनतम जानकारी
+जाँचो।
+
+हर उत्तर में ये जानकारी देने की कोशिश करो:
+
+1. योजना का नाम
+2. योजना किसके लिए है
+3. मुख्य लाभ
+4. पात्रता
+5. जरूरी दस्तावेज
+6. आवेदन कैसे करें
+7. आधिकारिक वेबसाइट या सरकारी source
+
+महत्वपूर्ण:
+
+- अनुमान लगाकर जानकारी मत बनाओ।
+- अगर जानकारी निश्चित नहीं है तो स्पष्ट रूप से बताओ।
+- योजना की पात्रता समय और राज्य के अनुसार बदल सकती है।
+- आवेदन करने से पहले official government website verify करने को कहो।
+- उत्तर हिंदी में दो।
+- आसान और साफ formatting इस्तेमाल करो।
+- किसी private website को official government website मत बताओ।
+
+`;
+
+
+    try{
+
+        const response = await fetch(API_URL,{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization":"Bearer " + apiKey
+            },
+
+            body:JSON.stringify({
+
+                model:MODEL,
+
+                input:[
+                    {
+                        role:"system",
+                        content:systemPrompt
+                    },
+                    {
+                        role:"user",
+                        content:question
+                    }
+                ],
+
+                tools:[
+                    {
+                        type:"browser_search"
+                    }
+                ],
+
+                tool_choice:"required",
+
+                temperature:0.2,
+
+                max_output_tokens:5000
+
+            })
+
+        });
+
+
+        const data = await response.json();
+
+
+        if(!response.ok){
+
+            throw new Error(
+                data.error?.message ||
+                "Groq API request failed"
+            );
+
+        }
+
+
+        let answer = "";
+
+
+        /*
+         * Responses API output अलग-अलग प्रकार के
+         * objects दे सकती है।
+         */
+
+        if(data.output_text){
+
+            answer = data.output_text;
+
+        }else if(Array.isArray(data.output)){
+
+            for(const item of data.output){
+
+                if(item.content){
+
+                    for(const part of item.content){
+
+                        if(part.text){
+
+                            answer += part.text;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        if(!answer){
+
+            answer =
+            "AI से उत्तर प्राप्त नहीं हुआ। कृपया दोबारा प्रयास करें।";
+
+        }
+
+
+        const result =
+        document.getElementById("result");
+
+
+        result.style.display = "block";
+
+
+        result.innerHTML = `
+
+            <h3>🇮🇳 योजना की जानकारी</h3>
+
+            <div>${cleanText(answer)}</div>
+
+            <hr style="margin:20px 0;border:0;border-top:1px solid #e1e7f0">
+
+            <small style="color:#6b7280">
+                ⚠️ अंतिम आवेदन से पहले संबंधित सरकारी
+                वेबसाइट पर पात्रता और नियम verify करें।
+            </small>
+
+        `;
+
+
+    }catch(error){
+
+        const result =
+        document.getElementById("result");
+
+        result.style.display = "block";
+
+        result.innerHTML = `
+
+            <h3>❌ समस्या</h3>
+
+            <p>
+                ${escapeHTML(error.message)}
+            </p>
+
+            <br>
+
+            <small>
+                API key सही है या नहीं और Groq API
+                access उपलब्ध है या नहीं, जाँचें।
+            </small>
+
+        `;
+
+    }
+
+
+    btn.disabled = false;
+
+}
+
+
+function escapeHTML(text){
+
+    return String(text)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+function searchScheme(){
+
+    const text =
+        document.getElementById("quickSearch").value.trim();
+
+    if(!text){
+
+        alert("कृपया योजना या अपनी जरूरत लिखें।");
+        return;
+
+    }
+
+    document.getElementById("question").value = text;
+
+    askAI();
+
+}
+
+
+function categorySearch(category){
+
+    document.getElementById("question").value =
+        `मुझे "${category}" से संबंधित भारत की वर्तमान सरकारी योजनाएँ बताओ। प्रत्येक योजना की पात्रता, लाभ, दस्तावेज और आवेदन प्रक्रिया हिंदी में बताओ।`;
+
+    document
+        .querySelector(".ai-card")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+function askPreset(question){
+
+    document.getElementById("question").value = question;
+
+    document
+        .querySelector(".ai-card")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    setTimeout(()=>{
+        askAI();
+    },500);
+
+}
+
+
+document
+.getElementById("quickSearch")
+.addEventListener("keydown",function(e){
+
+    if(e.key === "Enter"){
+
+        searchScheme();
+
+    }
+
+});
+
+
+</script>
+
+</body>
+  </html>
